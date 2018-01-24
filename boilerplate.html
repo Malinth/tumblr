@@ -1,0 +1,150 @@
+<!-- boilerplate for tumblr theme
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+<!-- meta -->
+{block:Description}
+   <meta name="description" content="{MetaDescription}" />
+{/block:Description}
+
+
+<!-- css -->
+<style type="text/css">
+
+body
+{}
+
+a
+{}
+
+img
+{}
+
+#title
+{}
+
+.texte 
+{}
+
+#quote
+{}
+
+#qui
+
+.label 
+{}
+
+.pagination
+{}
+</style>
+</head>
+
+<body>
+
+{Description}
+<br>
+{block:Posts} 
+
+<a href="{Permalink}">{NoteCount}</a>
+   {block:HasTags}{block:Tags}<a href="{TagURL}" class="tag">
+{Tag} {/block:Tags} {/block:HasTags}
+
+{block:RebloggedFrom}
+{/block:RebloggedFrom}
+
+{block:ContentSource}
+{/block:ContentSource}
+
+
+{block:Text}
+{block:Title}<div id="title">{Title}</div> {/block:Title}
+<div class="texte">{Body}</div>
+{/block:Text}
+
+{block:Link}
+
+<a href="{URL}" target="_blank"><div id="title>{Name}</div></a>
+
+<div class="texte">{Description}</div>
+{/block:Link}
+
+{block:Photo}
+<img src="{PhotoURL-500}"/>
+{/block:Photo}
+
+{block:Quote}
+<div id="quote">"{Quote}"</div>
+{block:Source}
+<div id="qui" class="texte">{Source}</div>{/block:Source}
+{/block:Quote}
+
+{block:Chat}
+{block:Title}<div id="title">{Title}</div> {/block:Title}
+{block:Lines}{block:Label}{Label}{/block:Label}{Line}{/block:Lines}
+{/block:Chat}
+
+{block:Audio}
+{block:AudioPlayer}{AudioPlayerBlack}
+{/block:AudioPlayer}
+
+{block:TrackName}{TrackName}{/block:TrackName}
+{block:Artist}      {Artist} {/block:Artist}
+{block:PlayCount} {PlayCountWithLabel}{/block:PlayCount}
+
+
+{/block:Audio}
+
+{block:Photoset}
+{Photoset-250}
+{/block:Photoset}
+
+{block:Video}
+{Video-250}
+{/block:Video}
+
+{block:PermalinkPage}
+
+{block:Caption}
+{Caption}
+{/block:Caption}
+
+{block:PostNotes}
+
+{block:RebloggedFrom}
+origin : <a href="{ReblogRootURL}">{ReblogRootName}</a> / Via : <a href="{ReblogParentURL}">{ReblogParentName}</a> {block:ContentSource}
+{/block:ContentSource}
+{/block:RebloggedFrom}
+
+
+{/block:PostNotes}
+
+{block:HasTags}
+<div class="label">{block:Tags}<a href="{TagURL}">#{Tag}</a> {/block:Tags}
+</div>
+{/block:HasTags}
+
+{block:PostNotes}
+{PostNotes}
+{/block:PostNotes}
+
+{/block:PermalinkPage}
+
+{/block:Posts}
+
+{block:Pagination}
+<div id="pagination" >
+{block:PreviousPage}<a href="{PreviousPage}">←</a>{/block:PreviousPage} {CurrentPage}/{TotalPages} {block:NextPage}<a href="{NextPage}">→</a>{/block:NextPage}
+
+</div>
+{/block:Pagination}
+
+</body>
+</html>
