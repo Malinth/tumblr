@@ -15,6 +15,8 @@ Theme name: Jungle -->
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Rammetto+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Satisfy|Shrikhand" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 <!-- meta -->
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
@@ -97,10 +99,8 @@ a
     width:50%;
 }
 
-.gallerygal{
-    display: inline-block
-    margin: 50px 50px;
-}
+
+
 blockquote
 {border-left:1px solid {color:Entry title};
 padding-left:5px;}
@@ -111,15 +111,23 @@ img
    max-height: 100%;
 }
 
-#logo {
+/*#logo {
     font-size: 30px;
     padding: 10px;
-    font-family: 'Abril fatface';
+font-family: 'Shrikhand', cursive;
+    color: #fff;
+    text-align: center;
+  /*  text-transform: uppercase;
+}*/
+
+#logo {
+    font-size: 90px;
+    /* padding: 10px; */
+    font-family: 'Shrikhand', cursive;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
 }
-
 
 #menu {
     position: fixed;
@@ -129,21 +137,38 @@ img
     font-family: arial;
     color: #ffffff;
     font-size: 15px;
+    background: white;
+}
+@media (max-width: 480px) {   
+#menu {
+    position: fixed;
+    left: 0px;
+    top: 10px;
+    width: 100%;
+    font-family: arial;
+    color: #ffffff;
+    font-size: 15px;
     background: #fff;
 }
-
-
+}
 #ab{
     color:#000;
         text-align: center;
+        margin:20px 100px;
 }
 
+@media (max-width: 480px) {   
+     #ab {
+      display: none;     }
+ }
 
 #pagination {
     width: 40px;
     text align: center;
     margin: auto;
     font-size: 40px;
+  font-family: 'Roboto Mono', monospace;
+    color:#000;
 }
 
 
@@ -225,7 +250,7 @@ text-align:center;
     padding: 4px 4px;
     text-transform: lowercase;
     letter-spacing:3px;
-    border: 1px dotted black;
+ /*   border: 1px dotted black;*/
     text-align: center;
     width: 100%;
 }
