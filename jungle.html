@@ -14,7 +14,7 @@ Theme name: Jungle -->
 <title>{Title}</title>
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
-
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Rammetto+One" rel="stylesheet">
 <!-- meta -->
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
@@ -92,10 +92,15 @@ a
 {
     font-size: 40px;
     font-family: tahoma;
-    float:left;
+  
+    text-align: center;
     width:50%;
 }
 
+.gallerygal{
+    display: inline-block
+    margin: 50px 50px;
+}
 blockquote
 {border-left:1px solid {color:Entry title};
 padding-left:5px;}
@@ -106,11 +111,13 @@ img
    max-height: 100%;
 }
 
-#logo{
-    font-size:30px;
-    padding:10px;
-    font-family:tahoma;
+#logo {
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Abril fatface';
     color: #fff;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -128,7 +135,17 @@ img
 
 #ab{
     color:#000;
+        text-align: center;
 }
+
+
+#pagination {
+    width: 40px;
+    text align: center;
+    margin: auto;
+    font-size: 40px;
+}
+
 
 #posts
 {margin:250px 0px 50px;
@@ -201,22 +218,31 @@ text-align:center;
 #polo:hover
 {cursor:pointer;}
 
-.links
-{width:300px;margin-top:5px;display:inline-block;}
-
+.links {
+    width: 300px;
+    margin-top: 5px;
+    display: inline-block;
+    padding: 4px 4px;
+    text-transform: lowercase;
+    letter-spacing:3px;
+    border: 1px dotted black;
+    text-align: center;
+    width: 100%;
+}
 
 .more {
-    margin-left: 2px;
+    margin: 0px 80px;
     /* color: #FFFFFF; */
     opacity: 1;
     -webkit-transition: all 0.6s ease-in-out;
     display: inline-block;
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
+    text-align: center;
 }
 
 .more:hover
-{opacity:0.4;}
+{opacity:0.4;color:green;}
 
 .iro
 {color:{color:Link};    }
@@ -244,9 +270,8 @@ text-align:center;
 
            
            <div class="links">
-           <a href="/"><div class="more">Home</div></a>
-           <a href="/ask"><div class="more">Message</div></a>
-           <a href="/archive"><div class="more" >Archive</div></a>
+           
+        
            {block:IfMenuLinks}
            <a href="{text:link1URL}"><div class="more"style="margin-top:5px;">{text:link1}</div></a>
            <a href="{text:link2URL}"><div class="more">{text:link2}</div></a>
